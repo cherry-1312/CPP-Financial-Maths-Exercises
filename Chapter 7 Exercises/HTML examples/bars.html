@@ -1,0 +1,61 @@
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'x');
+data.addColumn('number', 'y');
+data.addRows([
+[-3.72643, 5],
+[-3.46203, 11],
+[-3.19763, 24],
+[-2.93323, 37],
+[-2.66883, 110],
+[-2.40443, 175],
+[-2.14003, 305],
+[-1.87564, 523],
+[-1.61124, 885],
+[-1.34684, 1272],
+[-1.08244, 1789],
+[-0.818043, 2273],
+[-0.553645, 2737],
+[-0.289246, 3013],
+[-0.0248479, 3073],
+[0.23955, 3032],
+[0.503949, 2758],
+[0.768347, 2452],
+[1.03275, 1848],
+[1.29714, 1443],
+[1.56154, 946],
+[1.82594, 553],
+[2.09034, 340],
+[2.35474, 195],
+[2.61914, 103],
+[2.88353, 59],
+[3.14793, 24],
+[3.41233, 9],
+[3.67673, 4],
+[3.94113, 2]
+]);
+
+var options = {
+  title: 'Histogram',
+  hAxis: { title: 'x-Axis' },
+  vAxis: { title: 'y-Axis' },
+};
+
+var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+
+chart.draw(data, options);
+}
+</script>
+</head>
+<body>
+<div id="chart_div" style="width: 900px; height: 500px;"></div>
+</body>
+</html>
